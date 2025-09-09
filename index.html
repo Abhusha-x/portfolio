@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Rose_Flower_Clip_Art_Image.png">
+    <title>Abhusha's Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for social media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            /* Smooth scrolling for anchor links */
+        }
+
+        /* Custom styles for dropdown */
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
+        /* Navbar specific styles for hiding/showing */
+        .navbar-hidden {
+            top: -100px;
+            /* Adjust based on your navbar height */
+        }
+
+        .navbar-visible {
+            top: 0;
+        }
+
+        /* Adjusted transition for smoother effect */
+        .navbar-transition {
+            transition: top 0.4s ease-out;
+            /* Increased duration and changed easing */
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation Bar -->
+    <!-- Added rounded-xl for more rounded corners -->
+    <nav id="main-navbar" class="bg-white shadow-md fixed w-full z-10 navbar-visible navbar-transition rounded-b-xl">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#about"
+                class="text-2xl font-bold text-indigo-600 rounded-lg p-2 hover:bg-indigo-50 transition duration-300">Abhusha</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about"
+                    class="menu-link text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-lg px-3 py-2 hover:bg-gray-100">About
+                    Me</a>
+                <a href="#education"
+                    class="menu-link text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-lg px-3 py-2 hover:bg-gray-100">Education</a>
+                <a href="#experience"
+                    class="menu-link text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-lg px-3 py-2 hover:bg-gray-100">Experience</a>
+
+                <!-- Projects Dropdown -->
+                <div class="relative dropdown">
+                    <button
+                        class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-lg px-3 py-2 hover:bg-gray-100 focus:outline-none flex items-center">
+                        Projects
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu absolute hidden bg-white shadow-lg rounded-lg mt-2 w-48 py-2 z-20">
+                        <a href="project1.html"
+                            class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 rounded-md mx-2 my-1">Project
+                            One</a>
+                        <a href="project2.html"
+                            class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 rounded-md mx-2 my-1">Project
+                            Two</a>
+                        <a href="project3.html"
+                            class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 rounded-md mx-2 my-1">Project
+                            Three</a>
+                        <a href="project4.html"
+                            class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 rounded-md mx-2 my-1">Project
+                            Four</a>
+                        <a href="project5.html"
+                            class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 rounded-md mx-2 my-1">Project
+                            Five</a>
+                        <a href="project6.html"
+                            class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 rounded-md mx-2 my-1">Project
+                            Six</a>
+                    </div>
+                </div>
+
+                <a href="#skills"
+                    class="menu-link text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-lg px-3 py-2 hover:bg-gray-100">Skills</a>
+                <a href="#contact"
+                    class="menu-link text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-lg px-3 py-2 hover:bg-gray-100">Contact
+                    Me</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-700 hover:text-indigo-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2">
+            <a href="#about"
+                class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">About
+                Me</a>
+            <a href="#education"
+                class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Education</a>
+            <a href="#experience"
+                class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Experience</a>
+
+            <!-- Mobile Projects Dropdown -->
+            <div class="relative">
+                <button id="mobile-projects-button"
+                    class="w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 focus:outline-none flex justify-between items-center">
+                    Projects
+                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div id="mobile-projects-menu" class="hidden bg-gray-50 py-1">
+                    <a href="project1.html"
+                        class="menu-link block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Project
+                        One</a>
+                    <a href="project2.html"
+                        class="menu-link block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Project
+                        Two</a>
+                    <a href="project3.html"
+                        class="menu-link block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Project
+                        Three</a>
+                    <a href="project4.html"
+                        class="menu-link block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Project
+                        Four</a>
+                    <a href="project5.html"
+                        class="menu-link block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Project
+                        Five</a>
+                    <a href="project6.html"
+                        class="menu-link block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Project
+                        Six</a>
+                </div>
+            </div>
+
+            <a href="#skills"
+                class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Skills</a>
+            <a href="#contact"
+                class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Contact
+                Me</a>
+        </div>
+    </nav>
+
+    <main class="pt-20"> <!-- Padding to account for fixed navbar -->
+
+        <!-- About Me Section -->
+        <section id="about"
+            class="py-16 bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-lg rounded-b-lg mb-12">
+            <div class="container mx-auto px-6 text-center">
+                <img src="linkedin_img.jpg" alt="Profile Photo"
+                    class="rounded-full mx-auto mb-6 shadow-lg border-4 border-white">
+                <h1 class="text-5xl font-extrabold mb-4 animate-fade-in-down">Hello, I'm Abhusha!</h1>
+                <p class="text-xl max-w-3xl mx-auto mb-8 opacity-90 animate-fade-in-up">
+                    I'm a third-year electrical engineering student at the University of Toronto. Welcome
+                    to my portfolio!
+                </p>
+                <div class="flex justify-center space-x-6">
+                    <!-- Increased transition duration to duration-500 -->
+                    <a href="#projects"
+                        class="bg-white text-indigo-600 font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-100 hover:scale-105 transition duration-2000 ease-in-out transform">View
+                        My Projects</a>
+                    <!-- Increased transition duration to duration-500 -->
+                    <a href="#contact"
+                        class="border border-white text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-white hover:text-indigo-600 hover:scale-105 transition duration-2000 ease-in-out transform">Get
+                        In Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-16 bg-white shadow-md rounded-lg mx-auto max-w-6xl mb-12 px-6">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-center text-indigo-700 mb-12">Education</h2>
+                <div class="grid md:grid-cols-1 gap-10">
+                    <!-- Education Item 1 -->
+                    <div
+                        class="bg-gray-50 p-8 rounded-lg shadow-sm border border-gray-200 hover:shadow-lg transition duration-300 flex flex-col items-center text-center">
+                        <img src="brand-UofT.jpg" alt="Education Icon 1" class="mb-4 rounded-full">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Electrical
+                            Engineering, Bachelor of Applied Science</h3>
+                        <h2 class="text-xl font-semibold text-gray-900 mb-2">Certificate in Nuclear
+                            Engineering</h2>
+                        <p class="text-indigo-600 text-lg mb-1">University of Toronto, St. George Campus</p>
+                        <p class="text-gray-600 mb-4">Expected Graduation: May 2028</p>
+                        <ul class="list-disc list-inside text-gray-700 space-y-2 text-left">
+                            <p>Extracurriculars:
+                                <li>Electrical Team Member @ Robotics for Space Exploration (RSX), Sep 2025 – Present
+                                </li>
+                                <li>Web Developer & Executive Team Member @ Hi-Skule, Sep 2024 – Sep 2025</li>
+                                <li>Aircraft Team Member @ Human Powered Vehicles Design Team, Sep 2023 – May 2024</li>
+                            </p>
+                            <ul>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                            </ul>
+                            <p>Relevant Coursework:
+                                <li>Hardware Design (Radio RX Subsystem)</li>
+                                <li>Intro to Electronic Devices (COMSOL, Sentaurus)</li>
+                                <li>Digital Systems (Verilog)</li>
+                                <li>Computer Organization (RISC-V Processor Assembly Language & C)</li>
+                                <li>Computer Fundamentals (C)</li>
+                                <li>Programming Fundamentals (C++)</li>
+                                <li>Digital Electronics</li>
+                                <li>Computer Hardware</li>
+                                <li>Quantum & Semconductor Physics</li>
+                                <li>Elements of Nuclear Engineering</li>
+                                <li>Nuclear Reactor Theory & Design</li>
+                                <li>Circuit Analysis</li>
+                                <li>Signal Processing</li>
+                                <li>Electric & Magnetic Fields</li>
+                                <li>Calculus I, II, III</li>
+                                <li>Linear Algebra</li>
+                                <li>Probability & Applications</li>
+                                <li>Engineering Design & Communication I, II</li>
+                            </p>
+                            <ul>
+                                <li>&nbsp;&nbsp;&nbsp;&nbsp;</li>
+                            </ul>
+                            <p>Awards:
+                                <li>Second Place – Magna x Sustainibility Case Competition, Jan 2024</li>
+                                <li>Second Place – Qualcomm Smart Camera Technology Case Competition, Jan 2024</li>
+                                <li>James McAllister Award, Sep 2023</li>
+                            </p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-16 bg-gray-100 shadow-md rounded-lg mx-auto max-w-6xl mb-12 px-6">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-center text-indigo-700 mb-12">Experience</h2>
+                <div class="space-y-10">
+                    <!-- Experience Item 1 -->
+                    <div
+                        class="bg-white p-8 rounded-lg shadow-sm border border-gray-200 hover:shadow-lg transition duration-300 flex items-start">
+                        <img src="cityu.jpg" alt="Experience Icon 1" class="mr-6 mt-2 rounded-lg hidden sm:block">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="text-2xl font-semibold text-gray-900">Research Intern</h3>
+                                <span class="text-indigo-600 font-medium">Jun 2024 – Aug 2024</span>
+                            </div>
+                            <p class="text-xl text-gray-700 mb-4">City University of Hong Kong, Kowloon, Hong Kong SAR
+                            </p>
+                            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                <li>Conducted research on low-complexity machine learning models for brain-machine
+                                    interfaces under supervision of Dr. Arindam Basu.</li>
+                                <li>Processed and analyzed neural signals collected by Neuropixels using Python
+                                    libraries such as NumPy, SciPy, and Pandas, using signal processing techniques and
+                                    fourier transforms to detect neural spikes.</li>
+                                <li>Developed and tested algorithms to minimize data rates from implantable neural
+                                    interfaces, addressing overheating issues in brain tissues that arise from
+                                    transmitting large amounts of data.</li>
+                                <li>Assigned neural spikes to specific addresses corresponding to the neuron emitting
+                                    them by analyzing the spike characteristics.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Experience Item 2 -->
+                    <div
+                        class="bg-white p-8 rounded-lg shadow-sm border border-gray-200 hover:shadow-lg transition duration-300 flex items-start">
+                        <img src="rsx.jpg" alt="Experience Icon 2" class="mr-6 mt-2 rounded-lg hidden sm:block">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="text-2xl font-semibold text-gray-900">Electrical Team Member
+                                </h3>
+                                <span class="text-indigo-600 font-medium">Sep 2025 – Present</span>
+                            </div>
+                            <p class="text-xl text-gray-700 mb-4">Robotics for Space Exploration (RSX), University of
+                                Toronto
+                            </p>
+                            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                <li>Managed and led engineering outreach events for 200+ high schoolers.</li>
+                                <li>Designed the current website <a href="https://hiskule.skule.ca/home/"
+                                        target="_blank">[Link].</a></li>
+                                <li>Taught high school students the engineering design process and the functionality of
+                                    Arduino devices.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Experience Item 3 -->
+                    <div
+                        class="bg-white p-8 rounded-lg shadow-sm border border-gray-200 hover:shadow-lg transition duration-300 flex items-start">
+                        <img src="hi-skule.png" alt="Experience Icon 3" class="mr-6 mt-2 rounded-lg hidden sm:block">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="text-2xl font-semibold text-gray-900">Web Developer & Executive Team Member
+                                </h3>
+                                <span class="text-indigo-600 font-medium">Sep 2024 – Sep 2025</span>
+                            </div>
+                            <p class="text-xl text-gray-700 mb-4">Hi-Skule, University of Toronto
+                            </p>
+                            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                <li>Managed and led engineering outreach events for 200+ high schoolers.</li>
+                                <li>Designed the current website <a href="https://hiskule.skule.ca/home/"
+                                        target="_blank">[Link].</a></li>
+                                <li>Taught high school students the engineering design process, demonstrated the
+                                    functionality of
+                                    Arduino devices, and hosted case competitions.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Experience Item 4 -->
+                    <div
+                        class="bg-white p-8 rounded-lg shadow-sm border border-gray-200 hover:shadow-lg transition duration-300 flex items-start">
+                        <img src="hpvdt.jpg" alt="Experience Icon 4" class="mr-6 mt-2 rounded-lg hidden sm:block">
+                        <div>
+                            <div class="flex justify-between items-center mb-2">
+                                <h3 class="text-2xl font-semibold text-gray-900">General Team Member
+                                </h3>
+                                <span class="text-indigo-600 font-medium">Sep 2023 – May 2024</span>
+                            </div>
+                            <p class="text-xl text-gray-700 mb-4">Human Powered Vehicles Design Team, University of
+                                Toronto
+                            </p>
+                            <ul class="list-disc list-inside text-gray-700 space-y-2">
+                                <li>Designed the fuselage stand of the human-powered aircraft and created deatiled CAD
+                                    models for the fuselage support using SOLIDWORKS.</li>
+                                <li>Built components for the fueselage stand using 3D printing and traditional machining
+                                    techniques.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-16 bg-white shadow-md rounded-lg mx-auto max-w-6xl mb-12 px-6">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-center text-indigo-700 mb-12">Projects</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <a href="project1.html"
+                        class="block bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200 hover:shadow-lg hover:scale-105 transition duration-300 transform">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Radio Reciever Subsystem
+                        </h3>
+                        <p class="text-gray-700 mb-4">Designed a reciever for a radio onto a PCB using Altium.</p>
+                        <span class="text-indigo-600 font-medium">Learn More &rarr;</span>
+                    </a>
+                    <!-- Project 2 -->
+                    <a href="project2.html"
+                        class="block bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200 hover:shadow-lg hover:scale-105 transition duration-300 transform">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Instrument Simulation using Verilog</h3>
+                        <p class="text-gray-700 mb-4">Deverloped an instrument simulator on FPGA and VGA
+                            using Verilog</p>
+                        <span class="text-indigo-600 font-medium">Learn More &rarr;</span>
+                    </a>
+                    <!-- Project 3 -->
+                    <a href="project3.html"
+                        class="block bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200 hover:shadow-lg hover:scale-105 transition duration-300 transform">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Game Development on RISC-V</h3>
+                        <p class="text-gray-700 mb-4">Designed a game on a RISC-V processor using C.</p>
+                        <span class="text-indigo-600 font-medium">Learn More &rarr;</span>
+                    </a>
+                    <!-- Project 4 -->
+                    <a href="project4.html"
+                        class="block bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200 hover:shadow-lg hover:scale-105 transition duration-300 transform">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">Some Assembly Project</h3>
+                        <p class="text-gray-700 mb-4">A brief description of Project Four, highlighting its purpose and
+                            key features.</p>
+                        <span class="text-indigo-600 font-medium">Learn More &rarr;</span>
+                    </a>
+                    <!-- Project 5 -->
+                    <a href="project5.html"
+                        class="block bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200 hover:shadow-lg hover:scale-105 transition duration-300 transform">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">C++ Project</h3>
+                        <p class="text-gray-700 mb-4">A brief description of Project Five, highlighting its purpose and
+                            key features.</p>
+                        <span class="text-indigo-600 font-medium">Learn More &rarr;</span>
+                    </a>
+                    <!-- Project 6 -->
+                    <a href="project6.html"
+                        class="block bg-gray-50 p-6 rounded-lg shadow-sm border border-gray-200 hover:shadow-lg hover:scale-105 transition duration-300 transform">
+                        <h3 class="text-2xl font-semibold text-gray-900 mb-2">C Project</h3>
+                        <p class="text-gray-700 mb-4">A brief description of Project Six, highlighting its purpose and
+                            key features.</p>
+                        <span class="text-indigo-600 font-medium">Learn More &rarr;</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-16 bg-gray-100 shadow-md rounded-lg mx-auto max-w-6xl mb-12 px-6">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-center text-indigo-700 mb-12">Skills</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- Skill Item -->
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 text-center hover:shadow-md transition duration-300">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Programming & Hardware Languages</h3>
+                        <ul class="list-none text-gray-700 space-y-1">
+                            <li>Python</li>
+                            <li>C/C++</li>
+                            <li>Verilog</li>
+                            <li>RISC-V Assembly</li>
+                            <li>JavaScript</li>
+                            <li>MATLAB</li>
+                        </ul>
+                    </div>
+                    <!-- Skill Item -->
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 text-center hover:shadow-md transition duration-300">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Frameworks & Libraries</h3>
+                        <ul class="list-none text-gray-700 space-y-1">
+                            <li>NumPy</li>
+                            <li>SciPy</li>
+                            <li>Pandas</li>
+                            <li>Simulink</li>
+                        </ul>
+                    </div>
+                    <!-- Skill Item -->
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 text-center hover:shadow-md transition duration-300">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Electrical Engineering Tools</h3>
+                        <ul class="list-none text-gray-700 space-y-1">
+                            <li>KiCad</li>
+                            <li>Sentaurus</li>
+                            <li>COMSOL</li>
+                            <li>ModelSim</li>
+                            <li>LTspice</li>
+                            <li>Quartus Prime</li>
+                            <li>Altium</li>
+                        </ul>
+                    </div>
+                    <!-- Skill Item -->
+                    <div
+                        class="bg-white p-6 rounded-lg shadow-sm border border-gray-200 text-center hover:shadow-md transition duration-300">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">CAD</h3>
+                        <ul class="list-none text-gray-700 space-y-1">
+                            <li>KiCad</li>
+                            <li>Sentaurus</li>
+                            <li>Altium</li>
+                            <li>SOLIDWORKS</li>
+                            <li>Inventor Pro</li>
+                            <li>AutoCAD</li>
+                        </ul>
+                    </div>
+                    <!-- Add more skill categories as needed -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Me Section -->
+        <section id="contact"
+            class="py-16 bg-gradient-to-r from-indigo-500 to-purple-600 text-white shadow-lg rounded-t-lg">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-lg max-w-2xl mx-auto mb-8 opacity-90">
+                    Have a question or want to work together? Feel free to reach out!
+                </p>
+                <div class="w-full text-center">
+                    <div class="space-y-6">
+                        <p class="items-center justify-center md:justify-start text-lg">
+                            <i class="fas fa-envelope mr-3 text-indigo-200"></i> abhushaghimire@gmail.com
+                        </p>
+                        <p class="items-center justify-center md:justify-start text-lg">
+                            <i class="fas fa-phone mr-3 text-indigo-200"></i> +1 (647) 280-7331
+                        </p>
+                        <p class="items-center justify-center md:justify-start text-lg">
+                            <i class="fas fa-map-marker-alt mr-3 text-indigo-200"></i> Toronto, ON, CA
+                        </p>
+                    </div>
+                    <div class="justify-center md:justify-start space-x-6 mt-8">
+                        <a href="https://github.com/Abhusha-x" target="_blank" rel="noopener noreferrer"
+                            class="text-white hover:text-gray-200 transition duration-300 transform hover:scale-110">
+                            <i class="fab fa-github text-5xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/abhushaghimire/" target="_blank" rel="noopener noreferrer"
+                            class="text-white hover:text-gray-200 transition duration-300 transform hover:scale-110">
+                            <i class="fab fa-linkedin text-5xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="container mx-auto px-6 text-center">
+                    <!-- Contact Form
+                    <div class="bg-white p-8 rounded-lg shadow-xl w-full md:w-1/2 lg:w-1/3 text-gray-800">
+                        <h3 class="text-2xl font-semibold mb-6 text-indigo-700">Send Me a Message</h3>
+                        <form action="send_email.php" method="POST" class="space-y-5">
+                            <div>
+                                <label for="name"
+                                    class="block text-left text-gray-700 text-sm font-bold mb-2">Name:</label>
+                                <input type="text" id="name" name="name" required
+                                    class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition duration-200">
+                            </div>
+                            <div>
+                                <label for="email"
+                                    class="block text-left text-gray-700 text-sm font-bold mb-2">Email:</label>
+                                <input type="email" id="email" name="email" required
+                                    class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition duration-200">
+                            </div>
+                            <div>
+                                <label for="subject"
+                                    class="block text-left text-gray-700 text-sm font-bold mb-2">Subject:</label>
+                                <input type="text" id="subject" name="subject" required
+                                    class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition duration-200">
+                            </div>
+                            <div>
+                                <label for="message"
+                                    class="block text-left text-gray-700 text-sm font-bold mb-2">Message:</label>
+                                <textarea id="message" name="message" rows="6" required
+                                    class="shadow appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent transition duration-200"></textarea>
+                            </div>
+                            <button type="submit"
+                                class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-6 rounded-full focus:outline-none focus:shadow-outline transition duration-300 ease-in-out transform hover:scale-105 w-full">
+                                Send Message
+                            </button>
+                            <div id="form-message" class="mt-4 text-center text-sm font-medium"></div>
+                        </form>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white py-8 text-center">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 Abhusha. All rights reserved.</p>
+            <p class="text-sm mt-2">Built with <span class="text-red-500">&hearts;</span> and Tailwind CSS.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mainNavbar = document.getElementById('main-navbar');
+        let lastScrollY = window.scrollY;
+        const scrollThreshold = 50; // Pixels to scroll before hiding
+        const mouseTopThreshold = 50; // Pixels from top to show navbar
+
+        function showNavbar() {
+            mainNavbar.classList.remove('navbar-hidden');
+            mainNavbar.classList.add('navbar-visible');
+        }
+
+        function hideNavbar() {
+            mainNavbar.classList.remove('navbar-visible');
+            mainNavbar.classList.add('navbar-hidden');
+        }
+
+        // Handle scroll to hide/show navbar
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY && window.scrollY > scrollThreshold) {
+                // Scrolling down and past threshold
+                hideNavbar();
+            } else if (window.scrollY < lastScrollY) {
+                // Scrolling up
+                showNavbar();
+            }
+            lastScrollY = window.scrollY;
+        });
+
+        // Handle mouse movement to show navbar
+        document.addEventListener('mousemove', (e) => {
+            if (e.clientY < mouseTopThreshold) {
+                showNavbar();
+            }
+        });
+
+        // Handle clicks on menu items to hide navbar
+        document.querySelectorAll('.menu-link').forEach(link => {
+            link.addEventListener('click', function (e) {
+                // Only prevent default if it's an internal anchor link
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+                // Hide mobile menu if open
+                if (mobileMenu.classList.contains('block')) {
+                    mobileMenu.classList.remove('block');
+                    mobileMenu.classList.add('hidden');
+                }
+                // Hide main navbar after a menu item click
+                hideNavbar();
+            });
+        });
+
+        // Mobile menu toggle (existing functionality)
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('block');
+        });
+
+        // Mobile projects dropdown toggle (existing functionality)
+        const mobileProjectsButton = document.getElementById('mobile-projects-button');
+        const mobileProjectsMenu = document.getElementById('mobile-projects-menu');
+        mobileProjectsButton.addEventListener('click', () => {
+            mobileProjectsMenu.classList.toggle('hidden');
+            mobileProjectsMenu.classList.toggle('block');
+        });
+
+        // Form submission (client-side handling for demonstration) - existing functionality
+        const contactForm = document.querySelector('#contact form');
+        const formMessage = document.getElementById('form-message');
+
+        contactForm.addEventListener('submit', async function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            formMessage.textContent = 'Sending message...';
+            formMessage.classList.remove('text-green-600', 'text-red-600');
+            formMessage.classList.add('text-gray-600');
+
+            // Simulate form submission
+            try {
+                const response = await fetch(this.action, {
+                    method: this.method,
+                    body: new FormData(this),
+                    // headers: { 'Content-Type': 'application/json' } // Not needed for FormData
+                });
+
+                if (response.ok) {
+                    const result = await response.text(); // Or .json() if PHP returns JSON
+                    if (result.includes('success')) { // Adjust based on your PHP's output
+                        formMessage.textContent = 'Message sent successfully!';
+                        formMessage.classList.remove('text-gray-600');
+                        formMessage.classList.add('text-green-600');
+                        contactForm.reset(); // Clear form fields
+                    } else {
+                        formMessage.textContent = 'Failed to send message. Please try again.';
+                        formMessage.classList.remove('text-gray-600');
+                        formMessage.classList.add('text-red-600');
+                    }
+                } else {
+                    formMessage.textContent = 'An error occurred. Please try again later.';
+                    formMessage.classList.remove('text-gray-600');
+                    formMessage.classList.add('text-red-600');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                formMessage.textContent = 'Network error. Please check your connection.';
+                formMessage.classList.remove('text-gray-600');
+                formMessage.classList.add('text-red-600');
+            }
+        });
+    </script>
+</body>
+
+</html>
