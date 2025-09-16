@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Six - Abhusha's Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="Rose_Flower_Clip_Art_Image.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -69,101 +70,94 @@
                     </button>
                     <div class="dropdown-menu absolute hidden bg-white shadow-lg rounded-lg mt-2 w-48 py-2 z-20">
                         <a href="project1.html"
-                            class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 rounded-md mx-2 my-1">Project
+                            class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 rounded-md mx-2 my-1">Radio
+                            Reciever</a>
+                        <a href="project2.html"
+                            class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 rounded-md mx-2 my-1">Autonomous
+                            Drone</a>
+                        <a href="project3.html"
+                            class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 rounded-md mx-2 my-1">RISC-V
+                            Game</a>
+                        <a href="project4.html"
+                            class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 rounded-md mx-2 my-1">Verilog
+                            Piano Simulator</a>
+                        <a href="project5.html"
+                            class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 rounded-md mx-2 my-1">A
+                            Priori</a>
+                        <a href="project6.html"
+                            class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 rounded-md mx-2 my-1">Programming
+                            Projects</a>
+                    </div>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-700 hover:text-indigo-600 focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2">
+                <a href="index.html#about"
+                    class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">About
+                    Me</a>
+                <a href="index.html#education"
+                    class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Education</a>
+                <a href="index.html#experience"
+                    class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Experience</a>
+
+                <!-- Mobile Projects Dropdown -->
+                <div class="relative">
+                    <button id="mobile-projects-button"
+                        class="w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 focus:outline-none flex justify-between items-center">
+                        Projects
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div id="mobile-projects-menu" class="hidden bg-gray-50 py-1">
+                        <a href="project1.html"
+                            class="menu-link block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Project
                             One</a>
                         <a href="project2.html"
-                            class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 rounded-md mx-2 my-1">Project
+                            class="menu-link block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Project
                             Two</a>
                         <a href="project3.html"
-                            class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 rounded-md mx-2 my-1">Project
+                            class="menu-link block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Project
                             Three</a>
                         <a href="project4.html"
-                            class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 rounded-md mx-2 my-1">Project
+                            class="menu-link block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Project
                             Four</a>
                         <a href="project5.html"
-                            class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 rounded-md mx-2 my-1">Project
+                            class="menu-link block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Project
                             Five</a>
                         <a href="project6.html"
-                            class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 rounded-md mx-2 my-1">Project
+                            class="menu-link block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Project
                             Six</a>
                     </div>
                 </div>
 
                 <a href="index.html#skills"
-                    class="menu-link text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-lg px-3 py-2 hover:bg-gray-100">Skills</a>
+                    class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Skills</a>
                 <a href="index.html#contact"
-                    class="menu-link text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-lg px-3 py-2 hover:bg-gray-100">Contact
+                    class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Contact
                     Me</a>
             </div>
-
-            <!-- Mobile Menu Button -->
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-gray-700 hover:text-indigo-600 focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2">
-            <a href="index.html#about"
-                class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">About
-                Me</a>
-            <a href="index.html#education"
-                class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Education</a>
-            <a href="index.html#experience"
-                class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Experience</a>
-
-            <!-- Mobile Projects Dropdown -->
-            <div class="relative">
-                <button id="mobile-projects-button"
-                    class="w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 focus:outline-none flex justify-between items-center">
-                    Projects
-                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-                    </svg>
-                </button>
-                <div id="mobile-projects-menu" class="hidden bg-gray-50 py-1">
-                    <a href="project1.html"
-                        class="menu-link block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Project
-                        One</a>
-                    <a href="project2.html"
-                        class="menu-link block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Project
-                        Two</a>
-                    <a href="project3.html"
-                        class="menu-link block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Project
-                        Three</a>
-                    <a href="project4.html"
-                        class="menu-link block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Project
-                        Four</a>
-                    <a href="project5.html"
-                        class="menu-link block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Project
-                        Five</a>
-                    <a href="project6.html"
-                        class="menu-link block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Project
-                        Six</a>
-                </div>
-            </div>
-
-            <a href="index.html#skills"
-                class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Skills</a>
-            <a href="index.html#contact"
-                class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Contact
-                Me</a>
-        </div>
     </nav>
 
     <main class="pt-20"> <!-- Padding to account for fixed navbar -->
 
         <div class="container mx-auto px-4 py-12">
             <header class="text-center mb-10">
-                <h1 class="text-5xl font-extrabold text-indigo-700 mb-4">Project Six Title</h1>
-                <p class="text-xl text-gray-600">My final featured project in this collection.</p>
+                <h1 class="text-5xl font-extrabold text-indigo-700 mb-4">Programming Projects</h1>
+                <p class="text-xl text-gray-600">Sep 2022 – Present</p>
             </header>
 
             <!-- Project Image Carousel -->
@@ -236,32 +230,13 @@
             <section class="bg-white p-8 rounded-lg shadow-md mb-8">
                 <h2 class="text-3xl font-semibold text-indigo-600 mb-4">Technologies Used</h2>
                 <div class="flex flex-wrap gap-4 text-lg">
-                    <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">Technology A</span>
-                    <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">Technology B</span>
-                    <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">Technology C</span>
-                    <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">Technology D</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">C</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">C++</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">Assembly</span>
+
+                    <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">Python</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">MATLAB</span>
                 </div>
-            </section>
-
-            <section class="bg-white p-8 rounded-lg shadow-md mb-8">
-                <h2 class="text-3xl font-semibold text-indigo-600 mb-4">Challenges & Solutions</h2>
-                <p class="text-lg text-gray-700 leading-relaxed mb-4">
-                    During the development of this project, I encountered challenges such as [describe a specific
-                    challenge, e.g., optimizing performance, integrating a complex API].
-                </p>
-                <p class="text-lg text-gray-700 leading-relaxed">
-                    To overcome this, I implemented [describe the solution, e.g., a caching mechanism, a custom
-                    algorithm], which resulted in [positive outcome/learning].
-                </p>
-            </section>
-
-            <section class="bg-white p-8 rounded-lg shadow-md mb-8">
-                <h2 class="text-3xl font-semibold text-indigo-600 mb-4">Outcome & Learning</h2>
-                <p class="text-lg text-gray-700 leading-relaxed">
-                    The project successfully achieved its objectives, demonstrating [quantifiable results or key
-                    takeaways].
-                    Through this project, I significantly enhanced my skills in [specific skills gained or improved].
-                </p>
             </section>
 
             <div class="text-center mt-10">
