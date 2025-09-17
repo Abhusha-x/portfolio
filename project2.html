@@ -177,21 +177,27 @@
                     <div class="carousel-inner">
                         <!-- Carousel Item 1 -->
                         <div class="carousel-item active">
-                            <img src="https://placehold.co/800x450/a78bfa/ffffff?text=Project+2+Image+1"
-                                alt="Project 2 Image 1" class="w-full h-auto object-cover rounded-lg">
-                            <p class="text-center text-gray-600 mt-2">Description for Image 1</p>
+                            <img src="drone_complete.jpg" alt="Project 2 Image 1"
+                                class="w-full h-auto object-cover rounded-lg">
+                            <p class="text-center text-gray-600 mt-2">Drone</p>
                         </div>
                         <!-- Carousel Item 2 -->
                         <div class="carousel-item">
-                            <img src="https://placehold.co/800x450/818cf8/ffffff?text=Project+2+Image+2"
-                                alt="Project 2 Image 2" class="w-full h-auto object-cover rounded-lg">
-                            <p class="text-center text-gray-600 mt-2">Description for Image 2</p>
+                            <img src="drone_wiring.jpg" alt="Project 2 Image 2"
+                                class="w-full h-auto object-cover rounded-lg">
+                            <p class="text-center text-gray-600 mt-2">Wiring of the Drone</p>
                         </div>
                         <!-- Carousel Item 3 -->
                         <div class="carousel-item">
-                            <img src="https://placehold.co/800x450/6366f1/ffffff?text=Project+2+Image+3"
-                                alt="Project 2 Image 3" class="w-full h-auto object-cover rounded-lg">
-                            <p class="text-center text-gray-600 mt-2">Description for Image 3</p>
+                            <img src="nvidia_close.jpg" alt="Project 2 Image 3"
+                                class="w-full h-auto object-cover rounded-lg">
+                            <p class="text-center text-gray-600 mt-2">NVIDIA Jetson</p>
+                        </div>
+                        <!-- Carousel Item 4 -->
+                        <div class="carousel-item">
+                            <img src="nvidia_open.jpg" alt="Project 2 Image 4"
+                                class="w-full h-auto object-cover rounded-lg">
+                            <p class="text-center text-gray-600 mt-2">NVIDIA Jetson Closeup</p>
                         </div>
                     </div>
 
@@ -219,21 +225,23 @@
 
             <section class="bg-white p-8 rounded-lg shadow-md mb-8">
                 <h2 class="text-3xl font-semibold text-indigo-600 mb-4">Overview</h2>
-                <p class="text-lg text-gray-700 leading-relaxed">
-                    This project focused on [briefly describe what the project is about, its main goal, and what problem
-                    it solves].
-                    It leveraged [key technologies used, e.g., JavaScript, Vue.js, Firebase] to create [specific
-                    outcome].
+                <p class="text-lg text-gray-700 leading-relaxed">The drone was assembled using a drone kit. All the
+                    mechanical components and the electrical wiring have been completed. The deep learning model is
+                    still being developed in order to make the drone autonomous.
                 </p>
             </section>
 
             <section class="bg-white p-8 rounded-lg shadow-md mb-8">
-                <h2 class="text-3xl font-semibold text-indigo-600 mb-4">Key Features</h2>
+                <h2 class="text-3xl font-semibold text-indigo-600 mb-4">Technical Details</h2>
                 <ul class="list-disc list-inside text-lg text-gray-700 space-y-2">
-                    <li>Feature 1: Detailed explanation of a core feature and its benefit.</li>
-                    <li>Feature 2: Description of another important feature.</li>
-                    <li>Feature 3: How this feature contributes to the project's success.</li>
-                    <li>Feature 4: Any unique or innovative aspects.</li>
+                    <li>The flight controller is the Pixhawk 6C.</li>
+                    <li>M10 is the GPS module of the drone.</li>
+                    <li>Drone data is transmitted from the drone using a pair of 915 MHz SiK Telemetry Radio systems.
+                    </li>
+                    <li>Data is tramitted to and recieved by the drone using an ExpressLRS 2.4 GHz Nano Receiver and a
+                        radio controller.
+                    </li>
+                    <li>NVIDIA Jetson is used to compute and execute tasks.</li>
                 </ul>
             </section>
 

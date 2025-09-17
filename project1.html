@@ -244,8 +244,8 @@
             <section class="bg-white p-8 rounded-lg shadow-md mb-8">
                 <h2 class="text-3xl font-semibold text-indigo-600 mb-4">Overview</h2>
                 <p class="text-lg text-gray-700 leading-relaxed">
-                    The radio receiver subsystem is an integral part of the overall radio architechture. It
-                    receives and filters out to process only the desired wavelength.
+                    The radio receiver subsystem is a part of the radio architechture that
+                    receives and filters out noise to process only a desired range of signals.
                     The circuitry of the subsystem was designed and tested on LTSpice. Once the design of the circuit
                     had been finalized, Altium was used to create a PCB layout and the circuit elements (ICs,
                     transistors, inductors, capacitors, resistors) were soldered on.
@@ -257,15 +257,15 @@
             <section class="bg-white p-8 rounded-lg shadow-md mb-8">
                 <h2 class="text-3xl font-semibold text-indigo-600 mb-4">Technical Details</h2>
                 <ul class="list-disc list-inside text-lg text-gray-700 space-y-2">
-                    <li>Composition of the reciever: TR_EN enable, voltage clipper, bandpass filter, quadrature mixer,
-                        low pass filter, IQ amplifier</li>
-                    <li>1. The TR_EN enable was achieved using TMUX1101DCKR.</li>
-                    <li>2. The voltage clipper used two diodes.</li>
-                    <li>3. The bandpass filter was a 3-stage filter with 3 pairs of capacitors and inductors in
+                    <p>Composition of the reciever: TR_EN enable, voltage clipper, bandpass filter, quadrature mixer,
+                        low pass filter, IQ amplifier</p>
+                    <li>The TR_EN enable was achieved using TMUX1101DCKR.</li>
+                    <li>The voltage clipper used two diodes.</li>
+                    <li>The bandpass filter was a 3-stage filter with 3 pairs of capacitors and inductors in
                         pi-section configuration.</li>
-                    <li>4. ADE-1 was used as the quadrature mixer.</li>
-                    <li>5. The low pass filter was created using a pair of capacitor and inductors.</li>
-                    <li>6. A LM741 amplifier used as an IQ amplifier.</li>
+                    <li>ADE-1 was used as the quadrature mixer.</li>
+                    <li>The low pass filter was created using a pair of capacitor and inductors.</li>
+                    <li>A LM741 amplifier was used as an IQ amplifier.</li>
                 </ul>
             </section>
 
