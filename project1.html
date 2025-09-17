@@ -244,20 +244,28 @@
             <section class="bg-white p-8 rounded-lg shadow-md mb-8">
                 <h2 class="text-3xl font-semibold text-indigo-600 mb-4">Overview</h2>
                 <p class="text-lg text-gray-700 leading-relaxed">
-                    This project involved [briefly describe what the project is about, its main goal, and what problem
-                    it solves].
-                    It was developed using [key technologies used, e.g., Python, React, Node.js] and aimed to [specific
-                    objective].
+                    The radio receiver subsystem is an integral part of the overall radio architechture. It
+                    receives and filters out to process only the desired wavelength.
+                    The circuitry of the subsystem was designed and tested on LTSpice. Once the design of the circuit
+                    had been finalized, Altium was used to create a PCB layout and the circuit elements (ICs,
+                    transistors, inductors, capacitors, resistors) were soldered on.
+                    The receiver was tested by placing the motherboard onto a motherboard (to create the entire radio),
+                    wiring the right AC & DC voltages, and running a few Python scripts on the oscilloscope.
                 </p>
             </section>
 
             <section class="bg-white p-8 rounded-lg shadow-md mb-8">
-                <h2 class="text-3xl font-semibold text-indigo-600 mb-4">Key Features</h2>
+                <h2 class="text-3xl font-semibold text-indigo-600 mb-4">Technical Details</h2>
                 <ul class="list-disc list-inside text-lg text-gray-700 space-y-2">
-                    <li>Feature 1: Detailed explanation of a core feature and its benefit.</li>
-                    <li>Feature 2: Description of another important feature.</li>
-                    <li>Feature 3: How this feature contributes to the project's success.</li>
-                    <li>Feature 4: Any unique or innovative aspects.</li>
+                    <li>Composition of the reciever: TR_EN enable, voltage clipper, bandpass filter, quadrature mixer,
+                        low pass filter, IQ amplifier</li>
+                    <li>1. The TR_EN enable was achieved using TMUX1101DCKR.</li>
+                    <li>2. The voltage clipper used two diodes.</li>
+                    <li>3. The bandpass filter was a 3-stage filter with 3 pairs of capacitors and inductors in
+                        pi-section configuration.</li>
+                    <li>4. ADE-1 was used as the quadrature mixer.</li>
+                    <li>5. The low pass filter was created using a pair of capacitor and inductors.</li>
+                    <li>6. A LM741 amplifier used as an IQ amplifier.</li>
                 </ul>
             </section>
 
@@ -398,6 +406,5 @@
         }
     </script>
 </body>
-
 
 </html>
