@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="Rose_Flower_Clip_Art_Image.png">
+    <title>Assistive Cane - Abhusha's Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        .carousel-item {
+            display: none;
+        }
+
+        .carousel-item.active {
+            display: block;
+        }
+
+        /* Navbar specific styles for hiding/showing */
+        .navbar-hidden {
+            top: -100px;
+            /* Adjust based on your navbar height */
+        }
+
+        .navbar-visible {
+            top: 0;
+        }
+
+        /* Adjusted transition for smoother effect */
+        .navbar-transition {
+            transition: top 0.4s ease-out;
+            /* Increased duration and changed easing */
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav id="main-navbar" class="bg-white shadow-md fixed w-full z-10 navbar-visible navbar-transition rounded-b-xl">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html#about"
+                class="text-2xl font-bold text-indigo-600 rounded-lg p-2 hover:bg-indigo-50 transition duration-300">Abhusha</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html#about"
+                    class="menu-link text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-lg px-3 py-2 hover:bg-gray-100">About
+                    Me</a>
+                <a href="index.html#education"
+                    class="menu-link text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-lg px-3 py-2 hover:bg-gray-100">Education</a>
+                <a href="index.html#experience"
+                    class="menu-link text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-lg px-3 py-2 hover:bg-gray-100">Experience</a>
+
+                <!-- Projects Dropdown -->
+                <div class="relative dropdown">
+                    <button
+                        class="text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-lg px-3 py-2 hover:bg-gray-100 focus:outline-none flex items-center">
+                        Projects
+                        <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7">
+                            </path>
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu absolute hidden bg-white shadow-lg rounded-lg mt-2 w-48 py-2 z-20">
+                        <a href="project1.html"
+                            class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 rounded-md mx-2 my-1">Radio
+                            Reciever</a>
+                        <a href="project2.html"
+                            class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 rounded-md mx-2 my-1">Autonomous
+                            Drone</a>
+                        <a href="project3.html"
+                            class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 rounded-md mx-2 my-1">RISC-V
+                            Game</a>
+                        <a href="project4.html"
+                            class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 rounded-md mx-2 my-1">Verilog
+                            Piano Simulator</a>
+                        <a href="project5.html"
+                            class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 rounded-md mx-2 my-1">A
+                            Priori</a>
+                        <a href="project6.html"
+                            class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 rounded-md mx-2 my-1">Programming
+                            Projects</a>
+                        <a href="project7.html"
+                            class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 rounded-md mx-2 my-1">Assistive
+                            Cane</a>
+                    </div>
+                </div>
+
+                <a href="index.html#skills"
+                    class="menu-link text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-lg px-3 py-2 hover:bg-gray-100">Skills</a>
+                <a href="index.html#contact"
+                    class="menu-link text-gray-700 hover:text-indigo-600 font-medium transition duration-300 rounded-lg px-3 py-2 hover:bg-gray-100">Contact
+                    Me</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-700 hover:text-indigo-600 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg py-2">
+            <a href="index.html#about"
+                class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">About
+                Me</a>
+            <a href="index.html#education"
+                class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Education</a>
+            <a href="index.html#experience"
+                class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Experience</a>
+
+            <!-- Mobile Projects Dropdown -->
+            <div class="relative">
+                <button id="mobile-projects-button"
+                    class="w-full text-left px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300 focus:outline-none flex justify-between items-center">
+                    Projects
+                    <svg class="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                    </svg>
+                </button>
+                <div id="mobile-projects-menu" class="hidden bg-gray-50 py-1">
+                    <a href="project1.html"
+                        class="menu-link block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Radio
+                        Reciever</a>
+                    <a href="project2.html"
+                        class="menu-link block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Autonomous
+                        Drone</a>
+                    <a href="project3.html"
+                        class="menu-link block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">RISC-V
+                        Game</a>
+                    <a href="project4.html"
+                        class="menu-link block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Verilog
+                        Piano Simulator</a>
+                    <a href="project5.html"
+                        class="menu-link block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">A
+                        Priori</a>
+                    <a href="project6.html"
+                        class="menu-link block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Programming
+                        Projects</a>
+                    <a href="project7.html"
+                        class="menu-link block px-8 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Assistive
+                        Cane</a>
+                </div>
+            </div>
+
+            <a href="index.html#skills"
+                class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Skills</a>
+            <a href="index.html#contact"
+                class="menu-link block px-4 py-2 text-gray-700 hover:bg-gray-100 hover:text-indigo-600 transition duration-300">Contact
+                Me</a>
+        </div>
+    </nav>
+
+    <main class="pt-20"> <!-- Padding to account for fixed navbar -->
+
+        <div class="container mx-auto px-4 py-12">
+            <header class="text-center mb-10">
+                <h1 class="text-5xl font-extrabold text-indigo-700 mb-4">Assistive Cane</h1>
+                <p class="text-xl text-gray-600">Embedded Systems Project</p>
+            </header>
+
+            <!-- Project Image Display -->
+            <section class="bg-white p-8 rounded-lg shadow-md mb-8">
+                <h2 class="text-3xl font-semibold text-indigo-600 mb-6 text-center">Project Visuals</h2>
+                <div id="project-carousel"
+                    class="relative w-full max-w-2xl mx-auto overflow-hidden rounded-lg shadow-lg">
+                    <div class="carousel-inner">
+                        <!-- Single Image Item -->
+                        <div class="carousel-item active">
+                            <img src="assistive.jpg" alt="Assistive Cane Hardware Setup"
+                                class="w-full h-auto object-cover rounded-lg">
+                            <p class="text-center text-gray-600 mt-2">Assistive Cane Subsystems</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="bg-white p-8 rounded-lg shadow-md mb-8">
+                <h2 class="text-3xl font-semibold text-indigo-600 mb-4">Overview</h2>
+                <p class="text-lg text-gray-700 leading-relaxed">The system is an assistive navigation cane for the
+                    visually impaired, implemented on an STM32 Nucleo-F446RE board running at 168 MHz. The cane uses two
+                    hardware subsystems to sense its environment: an HC-SR04 ultrasonic transceiver measures the
+                    distance to obstacles ahead, and a BNO055 absolute orientation IMU measures the cane's tilt (roll
+                    and pitch) over I2C. The raw distance reading is geometrically corrected using the forward tilt
+                    angle to yield the true horizontal distance to the obstacle. This corrected distance is then
+                    classified by a debounced zone state machine into one of four states: CLEAR (>200cm), FAR (120-200
+                    cm), MID (50–120 cm), and NEAR (<50 cm). Each state triggers a distinct pre-recorded audio cue
+                        streamed from flash memory through the STM32's onboard 12-bit DAC to a passive speaker, giving
+                        the user real-time directional awareness.</p>
+            </section>
+
+            <section class="bg-white p-8 rounded-lg shadow-md mb-8">
+                <h2 class="text-3xl font-semibold text-indigo-600 mb-4">Technologies Used</h2>
+                <div class="flex flex-wrap gap-4 text-lg">
+                    <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">C</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">STM32 Nucleo
+                        Board</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">STM32CubeIDE</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">HC-SR04
+                        Transceiver</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">BNO055 IMU</span>
+                    <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full font-medium">Speakers</span>
+                </div>
+            </section>
+
+            <div class="text-center mt-10">
+                <a href="https://github.com/Abhusha-x/Assistive-Cane" target="_blank" rel="noopener noreferrer"
+                    class="inline-block bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105 mr-4">
+                    View on GitHub
+                </a>
+                <a href="index.html#projects"
+                    class="inline-block bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-8 rounded-full shadow-lg transition duration-300 transform hover:scale-105">
+                    Back to Projects
+                </a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6 text-center mt-12">
+        <div class="container mx-auto px-4">
+            <p>&copy; 2025 Abhusha. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navbar functionality
+        const mainNavbar = document.getElementById('main-navbar');
+        let lastScrollY = window.scrollY;
+        const scrollThreshold = 50;
+        const mouseTopThreshold = 50;
+
+        function showNavbar() {
+            mainNavbar.classList.remove('navbar-hidden');
+            mainNavbar.classList.add('navbar-visible');
+        }
+
+        function hideNavbar() {
+            mainNavbar.classList.remove('navbar-visible');
+            mainNavbar.classList.add('navbar-hidden');
+        }
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > lastScrollY && window.scrollY > scrollThreshold) {
+                hideNavbar();
+            } else if (window.scrollY < lastScrollY) {
+                showNavbar();
+            }
+            lastScrollY = window.scrollY;
+        });
+
+        document.addEventListener('mousemove', (e) => {
+            if (e.clientY < mouseTopThreshold) {
+                showNavbar();
+            }
+        });
+
+        document.querySelectorAll('.menu-link').forEach(link => {
+            link.addEventListener('click', function (e) {
+                if (this.getAttribute('href').startsWith('index.html#')) {
+                    e.preventDefault();
+                    window.location.href = this.getAttribute('href');
+                } else if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+                const mobileMenu = document.getElementById('mobile-menu');
+                if (mobileMenu && mobileMenu.classList.contains('block')) {
+                    mobileMenu.classList.remove('block');
+                    mobileMenu.classList.add('hidden');
+                }
+                hideNavbar();
+            });
+        });
+
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('block');
+        });
+
+        const mobileProjectsButton = document.getElementById('mobile-projects-button');
+        const mobileProjectsMenu = document.getElementById('mobile-projects-menu');
+        mobileProjectsButton.addEventListener('click', () => {
+            mobileProjectsMenu.classList.toggle('hidden');
+            mobileProjectsMenu.classList.toggle('block');
+        });
+    </script>
+</body>
+
+</html>
